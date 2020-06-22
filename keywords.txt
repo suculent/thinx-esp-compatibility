@@ -7,7 +7,7 @@
 #######################################
 
 THiNX	KEYWORD1
-ESPCompatiblity	KEYWORD1
+ESPCompatibility	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)

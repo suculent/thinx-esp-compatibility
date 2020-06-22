@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-class ESPCompatiblity {
+class ESPCompatibility {
 
   private:
 

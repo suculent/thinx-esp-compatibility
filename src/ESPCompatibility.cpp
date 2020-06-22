@@ -1,12 +1,12 @@
 #include "ESPCompatibility.h"
 
-ESPCompatiblity::ESPCompatiblity()
+ESPCompatibility::ESPCompatibility()
 {
   this->mac = mac_id();
   this->fcid = flash_id();
 }
 
-char *ESPCompatiblity::get_mac_id()
+char *ESPCompatibility::get_mac_id()
 {
   uint8_t raw[6];
 
@@ -22,7 +22,7 @@ char *ESPCompatiblity::get_mac_id()
   return this->mac;
 }
 
-char *ESPCompatiblity::get_flash_id()
+char *ESPCompatibility::get_flash_id()
 {
   uint8_t raw[6];
 
@@ -39,7 +39,7 @@ char *ESPCompatiblity::get_flash_id()
 }
 }
 
-char *ESPCompatiblity::mac_id()
+char *ESPCompatibility::mac_id()
 {
 
   if (this->mac == nullptr)
@@ -50,7 +50,7 @@ char *ESPCompatiblity::mac_id()
   return this->mac;
 }
 
-char *ESPCompatiblity::flash_id()
+char *ESPCompatibility::flash_id()
 {
 
   if (this->fcid == nullptr)
@@ -61,12 +61,12 @@ char *ESPCompatiblity::flash_id()
   return this->fcid;
 }
 
-String ESPCompatiblity::mac_id()
+String ESPCompatibility::mac_id()
 {
   return String(mac_id());
 }
 
-String ESPCompatiblity::flash_id()
+String ESPCompatibility::flash_id()
 {
   return String(flash_id());
 }
