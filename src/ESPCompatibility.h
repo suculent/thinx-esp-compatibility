@@ -12,14 +12,8 @@ class ESPCompatibility {
 
   public:
 
-    // Base Functionality
+    ESPCompatibility();
 
     char* mac_id();
     char* flash_id();
-
-    // Convenience Getters
-
-    String mac_id();
-    String flash_id();
-
-}
+};

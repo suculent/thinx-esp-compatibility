@@ -6,7 +6,7 @@ ESPCompatibility::ESPCompatibility()
   this->fcid = flash_id();
 }
 
-char *ESPCompatibility::get_mac_id()
+char * ESPCompatibility::get_mac_id()
 {
   uint8_t raw[6];
 
@@ -22,7 +22,7 @@ char *ESPCompatibility::get_mac_id()
   return this->mac;
 }
 
-char *ESPCompatibility::get_flash_id()
+char * ESPCompatibility::get_flash_id()
 {
   uint8_t raw[6];
 
@@ -37,36 +37,21 @@ char *ESPCompatibility::get_flash_id()
 
   return this->fcid;
 }
-}
 
 char *ESPCompatibility::mac_id()
 {
-
   if (this->mac == nullptr)
   {
     this->mac = get_mac_id();
   }
-
   return this->mac;
 }
 
-char *ESPCompatibility::flash_id()
+char * ESPCompatibility::flash_id()
 {
-
   if (this->fcid == nullptr)
   {
     this->fcid = get_flash_id();
   }
-
   return this->fcid;
-}
-
-String ESPCompatibility::mac_id()
-{
-  return String(mac_id());
-}
-
-String ESPCompatibility::flash_id()
-{
-  return String(flash_id());
 }
