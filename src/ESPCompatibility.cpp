@@ -11,7 +11,8 @@ char * ESPCompatibility::get_mac_id()
   uint8_t raw[6];
 
 #ifdef ESP8266
-  sprintf(this->mac, "%02X%02X%02X%02X%02X%02X", ESP.getChipID);
+  uint32_t chipid = ESP.getChipId();
+  sprintf(this->mac, "5CCF7F%.6X", ESP.getChipId());
 #endif
 
 #ifdef ESP32
