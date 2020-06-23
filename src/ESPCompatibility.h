@@ -1,19 +1,20 @@
 #include <Arduino.h>
 
+#ifdef ESP8266
+#include <ESP8266WiFi.h>
+#else
+#include <WiFi.h>
+#endif
 class ESPCompatibility {
 
-  private:
-
-    char * mac = nullptr;
-    char * fcid = nullptr;
-
-    char * get_mac_id();
-    char * get_flash_id();
+    static char * get_mac_id();
+    static char * get_flash_id();
 
   public:
 
-    ESPCompatibility();
+    static char * mac;  // [13]
+    static char * fcid; // [13]
 
-    char* mac_id();
-    char* flash_id();
+    static char* mac_id();
+    static char* flash_id();
 };
